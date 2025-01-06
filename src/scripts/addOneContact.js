@@ -4,12 +4,13 @@ import { writeContacts } from '../utils/writeContacts.js';
 
 export const addOneContact = async () => {
   try {
-    const allContacts = await readContacts();
+    const getAllContacts = await readContacts();
     const newContact = createFakeContact();
-    const updateContacts = [...allContacts, newContact];
+    const updateContacts = [...getAllContacts, newContact];
     await writeContacts(updateContacts);
-  } catch (error) {
-    console.log(error);
+  }
+  catch (e) {
+    console.log(e);
   }
 };
 

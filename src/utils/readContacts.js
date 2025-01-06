@@ -7,6 +7,6 @@ export const readContacts = async () => {
         return JSON.parse(data) || []
     }
     catch (e) {
-        console.error('Помилка читання файлу:', e);
+        console.log('Помилка читання файлу:', e);
     }
 };
